@@ -1,0 +1,10 @@
+footer {
+    display: flex;
+    justify-content: center;
+    border-top: 2px solid rgb(204, 204, 204);
+    padding: 2rem 0 1.5rem;
+}
+
+footer span {
+    text-align: center;
+}
