@@ -1,12 +1,13 @@
 .reinsurance {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
     padding: 50px 20px;
 }
 
 .reinsurance .field {
     text-align: center;
-    width: 33%;
+    width: 100%;
 }
 
 .reinsurance .field img {
@@ -27,4 +28,17 @@
 
 .reinsurance p {
     margin-top: 1rem;
+}
+
+
+
+@media(min-width: 920px) {
+    .reinsurance {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .reinsurance .field {
+        width: 33%;
+    }
 }
