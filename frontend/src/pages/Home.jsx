@@ -1,10 +1,13 @@
 import React from 'react';
-import BannerHero from '../components/homepage/BannerHero';
+import BannerHero from '../components/bannerHero/BannerHero';
+import Reinsurance from '../components/reinsurance/Reinsurance';
 
 function Home() {
   return (
     <main>
         <BannerHero />
+
+        <Reinsurance />
     </main>
   );
 }

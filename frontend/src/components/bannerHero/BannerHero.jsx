@@ -1,7 +1,7 @@
 import React from "react";
 import HeroContent from './HeroContent';
 import imgHero from '../../assets/img/bank-tree.jpeg';
-import './homepage.css';
+import './bannerHero.css';
 
 export const BannerHero = () => {
 

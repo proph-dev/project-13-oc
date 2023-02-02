@@ -1,0 +1,30 @@
+.reinsurance {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 20px;
+}
+
+.reinsurance .field {
+    text-align: center;
+    width: 33%;
+}
+
+.reinsurance .field img {
+    width: 152px;
+    height: 152px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: rgb(0, 188, 119);
+    border-image: initial;
+    border-radius: 50%;
+    padding: 1rem;
+}
+
+.reinsurance h2 {
+    margin-top: 1rem;
+    font-size: 1.25rem;
+}
+
+.reinsurance p {
+    margin-top: 1rem;
+}
