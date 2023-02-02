@@ -1,5 +1,5 @@
 import React from "react";
-import './homepage.css';
+import './bannerHero.css';
 
 export const HeroContent = () => {
 
