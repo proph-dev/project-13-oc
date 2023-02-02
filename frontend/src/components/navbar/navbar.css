@@ -1,0 +1,22 @@
+/*** Navbar ***/
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+}
+
+nav img {
+    width: 200px;
+    max-width: 100%;
+}
+
+nav .sign-in {
+    font-weight: 700;
+    text-decoration: none;
+    margin-right: .5rem;
+}
+
+nav .sign-in:hover {
+    text-decoration: underline;
+}
