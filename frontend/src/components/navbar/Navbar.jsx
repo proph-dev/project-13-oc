@@ -10,7 +10,7 @@ export const Navbar = () => {
                 <img src={ logo } alt="Logo de ArgentBank" />
             </NavLink>
 
-            <NavLink to="/" className="sign-in">Sign in</NavLink>
+            <NavLink to="sign-in" className="tab_sign-in">Sign in</NavLink>
         </nav>
     )
 }

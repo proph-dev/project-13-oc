@@ -12,12 +12,12 @@ nav img {
     max-width: 100%;
 }
 
-nav .sign-in {
+nav .tab_sign-in {
     font-weight: 700;
     text-decoration: none;
     margin-right: .5rem;
 }
 
-nav .sign-in:hover {
+nav .tab_sign-in:hover {
     text-decoration: underline;
 }

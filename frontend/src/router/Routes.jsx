@@ -4,6 +4,7 @@ import { Navbar } from '../components/navbar/Navbar';
 import { Footer } from '../components/footer/Footer';
 
 import Home from "../pages/Home";
+import SignIn from "../pages/SignIn";
 
 export const RoutesPage = () => {
     return (
@@ -14,6 +15,7 @@ export const RoutesPage = () => {
             <main>
                 <Routes>
                     <Route path="/" element={<Home />} />
+                    <Route path="/sign-in" element={<SignIn />} />
                 </Routes>
             </main>
             <Footer />
