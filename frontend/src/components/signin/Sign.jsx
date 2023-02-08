@@ -8,10 +8,10 @@ export const Sign = () => {
                 <h1>Sign in</h1>
                 <form action="">
                     <label htmlFor="">Username</label>
-                    <input type="text" />
+                    <input type="text" required />
 
                     <label htmlFor="">Password</label>
-                    <input type="text" />
+                    <input type="text" required />
 
                     <div className="remember">
                         <input type="checkbox" name="remember" id="remember" />
