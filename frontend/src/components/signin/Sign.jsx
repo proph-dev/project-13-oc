@@ -1,9 +1,11 @@
 import React, { useState }  from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch, useSelector , Provider} from "react-redux";
 import { useLogin } from '../../hooks/useLogin';
+import store from '../../redux/store';
 import './sign.css';
 
 export const Sign = () => {
+  const { login, hasError } = useLogin();
     const token = useSelector((state) => state.user.token);
     const dispatch = useDispatch();
 
@@ -31,6 +33,7 @@ export const Sign = () => {
       };
 
     return (
+      <Provider store={store}>
         <section className="sign-in">
             <div className="content">
                 <h1>Sign in</h1>
@@ -50,6 +53,7 @@ export const Sign = () => {
                 </form>
             </div>
         </section>
+      </Provider>
     )
 }
 

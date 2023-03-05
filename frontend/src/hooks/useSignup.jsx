@@ -1,36 +1,30 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
 
 // base url
 const api = axios.create({
-  baseURL: `http://localhost:3000`
+  baseURL: "http://localhost:3000"
 });
 
-
-export const useSignup = () => {
-
-  const [data, setData] = useState(null);
-  const [isLoading, setIsLoading] = useState(false);
+export const useSignUp = () => {
   const [hasError, setHasError] = useState(false)
 
-  useEffect(() => {
-    const fetchData = async () => {
-      setIsLoading(true);
-      try {
-        const response = await api.post('/api/v1/user/signup')
-        setData(response.data.data);
-        setIsLoading(false);
-      } catch (e) {
-        setHasError(true);
-        setIsLoading(false);
-      }
+  const signUp = async (email, pseudo, password) => {
+    try {
+      await api.post('/api/v1/user/signup', {
+        email,
+        pseudo,
+        password
+      });
+      window.location.reload();
+    } catch (error) {
+      setHasError(true);
+      console.log(error);
     }
-    fetchData();
-  }, []);
+  };
 
   return {
-    data,
-    isLoading,
+    signUp,
     hasError
   }
 }
