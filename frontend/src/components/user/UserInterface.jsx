@@ -4,7 +4,7 @@ import './user.css';
 export const UserInterface = () => {
     return (
       <section className="user">
-            <h1>Welcome back Tony Jarvis</h1>
+            <h1>Welcome back <span>Tony Jarvis</span></h1>
             <button>Edit Name</button>
 
             <div className="balance">

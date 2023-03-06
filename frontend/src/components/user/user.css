@@ -9,10 +9,14 @@
 
 .user h1 {
     color: #fff;
-    width: 15%;
     text-align: center;
     font-size: 2em;
     margin: .67em 0;
+}
+
+.user h1 span {
+    display: block;
+    color: #fff;
 }
 
 .user button {
@@ -58,4 +62,27 @@
     border-color: #00bc77;
     background-color: #00bc77;
     color: #fff;
+}
+
+@media(max-width: 720px) {
+    .user {
+        height: 100%;
+        padding: 2rem;
+    };
+
+    .user h1 {
+        width: 100%;
+    }
+
+    .user .balance {
+        flex-direction: column;
+    }
+
+    .user .balance h3,
+    .user .balance p,
+    .user .balance span {
+        display: block;
+        text-align: center;
+        width: 100%;
+    }
 }
