@@ -1,5 +1,5 @@
 import { useDispatch } from 'react-redux';
-import { setEmail, setToken } from '../redux/reducer';
+import { setEmail, setToken, setFirstName, setLastName } from '../redux/reducer';
 
 export const useAuth = () => {
   const dispatch = useDispatch();

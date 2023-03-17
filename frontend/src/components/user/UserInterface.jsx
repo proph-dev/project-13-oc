@@ -1,10 +1,21 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useProfile } from '../../hooks/useProfile';
 import './user.css';
 
 export const UserInterface = () => {
+    const { profile, firstName, lastName, hasError } = useProfile();
+    
+    useEffect(() => {
+        profile();
+    }, [profile])
+
+    if(hasError) {
+        return <div>Une erreur est survenue</div>
+    }
+
     return (
       <section className="user">
-            <h1>Welcome back <span>Tony Jarvis</span></h1>
+            <h1>Welcome back <span>{ firstName } { lastName }</span></h1>
             <button>Edit Name</button>
 
             <div className="balance">

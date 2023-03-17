@@ -4,7 +4,7 @@ export const userSlice = createSlice({
   name: "user",
   initialState: {
     email: "",
-    token: "",
+    token: ""
   },
   reducers: {
     setEmail: (state, action) => {
@@ -12,7 +12,7 @@ export const userSlice = createSlice({
     },
     setToken: (state, action) => {
       state.token = action.payload;
-    },
+    }
   },
 });
 
