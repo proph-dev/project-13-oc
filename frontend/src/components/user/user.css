@@ -87,3 +87,37 @@
         width: 100%;
     }
 }
+
+.user .edit-name .error-message {
+    font-size: 1rem;
+    font-weight: 400;
+    color: red;
+    margin-top: 1rem;
+}
+
+.user .edit-name input {
+    margin: 0 1rem;
+    padding: .5rem;
+    border-radius: 3px;
+    border: #777 solid 1px;
+    outline: none;
+    font-weight: 500;
+}
+
+.user .edit-name button {
+    margin: 0 1rem;
+    padding: .5rem;
+    width: 100px;
+    border-radius: 3px;
+    border: #777 solid 1px;
+    outline: none;
+    font-weight: 500;
+    background-color: #fff;
+    color: #00bc77;
+    transition: all .2s ease-in-out;
+}
+
+.user .edit-name button:hover {
+    background-color: #00bc77;
+    color: #fff;
+}

@@ -21,3 +21,12 @@ nav .tab_sign-in {
 nav .tab_sign-in:hover {
     text-decoration: underline;
 }
+
+nav .user-informations {
+    display: flex;
+}
+
+nav .user-informations p {
+    margin-right: 1rem;
+    font-weight: 700;
+}

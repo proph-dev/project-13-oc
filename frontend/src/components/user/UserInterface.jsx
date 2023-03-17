@@ -1,22 +1,46 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { useProfile } from '../../hooks/useProfile';
+import { useEditName } from "../../hooks/useEditName";
+import EditName from './EditName';
 import './user.css';
 
 export const UserInterface = () => {
     const { profile, firstName, lastName, hasError } = useProfile();
+    const { editName, hasError: editError } = useEditName();
+    const [isEditingName, setIsEditingName] = useState(false);
     
     useEffect(() => {
         profile();
     }, [profile])
 
-    if(hasError) {
+    if(hasError || editError) {
         return <div>Une erreur est survenue</div>
     }
 
+    const handleEditName = (event) => {
+        setIsEditingName(true);
+    };
+
+    const handleSaveName = async (newFirstName, newLastName) => {
+        await editName(newFirstName, newLastName);
+        setIsEditingName(false);
+    };
+
+    const handleCancelName = () => {
+        setIsEditingName(false);
+    };
+
     return (
       <section className="user">
-            <h1>Welcome back <span>{ firstName } { lastName }</span></h1>
-            <button>Edit Name</button>
+            <h1>
+                Welcome back
+                {isEditingName ? (
+                    <EditName initialFirstName={ firstName } initialLastName={ lastName } onSave={ handleSaveName } onCancel={ handleCancelName } />
+                ) : (
+                    <span>{ firstName } { lastName }</span>
+                )}
+            </h1>
+            {!isEditingName && <button onClick={ handleEditName }>Edit Name</button>}
 
             <div className="balance">
                 <div>
