@@ -12,10 +12,14 @@ export const userSlice = createSlice({
     },
     setToken: (state, action) => {
       state.token = action.payload;
+    },
+    logout: (state) => {
+      state.email = "";
+      state.token = "";
     }
   },
 });
 
-export const { setEmail, setToken } = userSlice.actions;
+export const { setEmail, setToken, logout } = userSlice.actions;
 
 export const userReducer = userSlice.reducer;

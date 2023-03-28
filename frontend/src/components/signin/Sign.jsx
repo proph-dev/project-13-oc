@@ -17,7 +17,7 @@ export const Sign = () => {
 
     useEffect(() => {
       if(token.length > 0) {
-        navigate('/user');
+        navigate('/profile');
       }
     }, [token]);
 

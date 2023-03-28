@@ -12,6 +12,13 @@ nav img {
     max-width: 100%;
 }
 
+nav .tab_sign-out {
+    border: none;
+    background-color: transparent;
+    font-weight: 700;
+    cursor: pointer;
+}
+
 nav .tab_sign-in {
     font-weight: 700;
     text-decoration: none;
